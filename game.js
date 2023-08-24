@@ -55,7 +55,7 @@ function checkAnswer (currlevel)
         {
             $("body").removeClass("game-over");
         },200);
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over, Refresh Page");
         startOver();
     }
 }

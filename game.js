@@ -6,6 +6,13 @@ var userclicked = [];
 var level=0;
 var start=false;
 
+setTimeout(function()
+{
+    var a = $.Event("keypress");
+    a.which = 91;
+    $(document).trigger(a);
+},1000);
+
 $(document).keypress(function() {
     if (!start) 
     {
@@ -71,7 +78,7 @@ function nextSequence()
 
 function playSound(name)
 {
-    var audio = new Audio(name + ".mp3");
+    var audio = new Audio("sounds/" + name + ".mp3");
     audio.play();
 }
 

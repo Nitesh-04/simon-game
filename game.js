@@ -31,8 +31,6 @@ function checkAnswer (currlevel)
 {
     if (gamePattern[currlevel] === userclicked[currlevel])
     {
-        console.log("success");
-    
         if (userclicked.length === gamePattern.length)
         {
             setTimeout(function () 
@@ -44,7 +42,14 @@ function checkAnswer (currlevel)
     }
     else
     {
-        console.log("wrong");
+        playSound("wrong");
+        $("body").addClass("game-over");
+        setTimeout(function()
+        {
+            $("body").removeClass("game-over");
+        },200);
+        $("#level-title").text("Game Over, Press Any Key to Restart");
+        startOver();
     }
 }
  
@@ -80,4 +85,10 @@ function animatePress(currcolor)
     },100);
 }
 
+function startOver()
+{
+    level=0;
+    gamePattern=[];
+    start = false;
+}
 

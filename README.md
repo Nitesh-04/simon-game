@@ -1,2 +1,2 @@
 # simon-game
-wrote the js code for the simon-game as part of my course
+Developed a Simon Game application requiring users to recall and replicate patterns of colors, enhancing memory and cognitive skills through interactive gameplay.
